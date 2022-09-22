@@ -1,14 +1,15 @@
-import { StatusBar } from 'expo-status-bar';
-import { Image, StyleSheet, TouchableOpacity, Text, TextInput, View } from 'react-native';
-import logo from './assets/Front.png';
+import { Image, StyleSheet, Text, View } from 'react-native';
 import Login from './components/Login';
+import logo from './assets/Front.png';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Image source={logo} style={styles.logo} />
+      <Image source={logo} style={styles.logo}></Image>
       <Text style={styles.clube}>Clube Senacoin</Text>
-      <Login></Login>
+      <View>
+        <Login></Login>
+      </View>
     </View>
   );
 }
@@ -19,17 +20,20 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    borderWidth: 1,
+    borderColor: "rgba(230, 230, 230,1)",
   },
   logo: {
     width: 305,
-    height: 160,
-    alignContent: 'cover'
+    height: 250,
+    alignContent: 'cover',
+    resizeMode: 'stretch'
   },
   clube: {
     textAlign: 'center',
     color: 'red',
     fontWeight: 'bold',
     shadowColor: 'black',
-    paddingHorizontal: 12,
+    fontSize: 24
   },
 });
