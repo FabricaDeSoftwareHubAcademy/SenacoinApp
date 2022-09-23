@@ -17,7 +17,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'gray',
     alignItems: 'center',
     justifyContent: 'center',
     borderWidth: 1,
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
   },
   clube: {
     textAlign: 'center',
-    color: 'red',
+    color: "rgba(139,87,42,1)",
     fontWeight: 'bold',
     shadowColor: 'black',
     fontSize: 24

@@ -1,4 +1,5 @@
-import { StyleSheet, Text, TextInput, TouchableOpacity, View, Image } from "react-native";
+import { StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { Ionicons } from '@expo/vector-icons'
 
 const Login = () => {
   return (
@@ -12,19 +13,27 @@ const Login = () => {
           style={styles.ph_cpf}
         />
         <Text style={styles.senha}>Senha</Text>
-        <TextInput
-          placeholder="Digite sua Senha"
-          placeholderTextColor={'gray'}
-          style={styles.ph_senha}
-        />
+        <View style={styles.vw_senha}>
+          <TextInput
+            maxLength='10'
+            textContentType="password"
+            placeholder="Digite sua Senha"
+            placeholderTextColor={'gray'}
+            style={styles.ph_senha}
+            secureTextEntry={true}
+          />
+          <TouchableOpacity style={styles.icon}>
+            <Ionicons name="eye" color="white" size="25"></Ionicons>
+          </TouchableOpacity>
+        </View>
         <TouchableOpacity style={styles.btn_acessar}>
           <Text style={styles.txt_btn_acessar}>Entrar no clube</Text>
         </TouchableOpacity>
-        <View style={styles.esqueceuSuaSenhaRow}>
+        <View style={[styles.esqueceuSuaSenhaRow, styles.rect]}>
           <Text style={styles.esqueceuSuaSenha}>Esqueçeu sua senha?</Text>
           <Text style={styles.cliqueAqui}>Clique aqui.</Text>
+          <Text style={styles.rodape}>Aqui</Text>
         </View>
-
       </View>
     </View>
   );
@@ -35,8 +44,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   rect: {
-    width: 375,
-    height: 753,
+    flex: 1,
     backgroundColor: "rgba(6,6,6,1)",
     marginTop: 35,
     borderTopStartRadius: 15,
@@ -60,7 +68,8 @@ const styles = StyleSheet.create({
   },
   ph_cpf: {
     fontFamily: "roboto-regular",
-    color: "rgba(255,255,255,1)",
+    keyboardType: 'numeric',
+    color: "black",
     height: 34,
     width: 239,
     textAlign: "center",
@@ -88,11 +97,20 @@ const styles = StyleSheet.create({
     marginLeft: 68,
     paddingBottom: 10
   },
+  vw_senha: {
+    flexDirection: "row",
+    height: 34,
+    marginLeft: 68,
+    width: 239,
+    borderRadius: 10,
+    alignContent: "center",
+    alignItems: "center",
+  },
   ph_senha: {
     fontFamily: "roboto-regular",
-    color: "rgba(255,255,255,1)",
-    height: 34,
-    width: 239,
+    color: "black",
+    width: '85%',
+    height: '100%',
     textAlign: "center",
     fontSize: 16,
     backgroundColor: "rgba(255,255,255,1)",
@@ -107,7 +125,11 @@ const styles = StyleSheet.create({
     elevation: 5,
     shadowOpacity: 1,
     shadowRadius: 0,
-    marginLeft: 68
+  },
+  icon: {
+    width: '15%',
+    backgroundColor: "black",
+    alignItems: "center"
   },
   btn_acessar: {
     paddingTop: 10,
@@ -140,6 +162,12 @@ const styles = StyleSheet.create({
     marginTop: 23,
     marginLeft: 68,
     marginRight: 94
+  },
+  rodape: {
+    color: "white",
+    flexWrap: "wrap",
+    marginTop: 50,
+    textAlign: "center"
   }
 });
 
