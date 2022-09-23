@@ -32,6 +32,8 @@ const Login = () => {
         <View style={[styles.esqueceuSuaSenhaRow, styles.rect]}>
           <Text style={styles.esqueceuSuaSenha}>Esqueçeu sua senha?</Text>
           <Text style={styles.cliqueAqui}>Clique aqui.</Text>
+        </View>
+        <View>
           <Text style={styles.rodape}>Aqui</Text>
         </View>
       </View>
@@ -166,7 +168,6 @@ const styles = StyleSheet.create({
   rodape: {
     color: "white",
     flexWrap: "wrap",
-    marginTop: 50,
     textAlign: "center"
   }
 });
