@@ -7,15 +7,18 @@ const Login = () => {
       <View style={styles.rect}>
         <Text style={styles.info}>Entre com a sua conta</Text>
         <Text style={styles.cpf}>CPF</Text>
+        <View style={styles.vw_cpf}>
         <TextInput
+          maxLength={11}
           placeholder="Digite seu CPF"
           placeholderTextColor={'gray'}
           style={styles.ph_cpf}
         />
+        </View>
         <Text style={styles.senha}>Senha</Text>
         <View style={styles.vw_senha}>
           <TextInput
-            maxLength='10'
+            maxLength={10}
             textContentType="password"
             placeholder="Digite sua Senha"
             placeholderTextColor={'gray'}
@@ -53,29 +56,35 @@ const styles = StyleSheet.create({
     borderTopEndRadius: 15
   },
   info: {
-    fontFamily: "roboto-700",
     color: "rgba(255,255,255,1)",
-    fontSize: 24,
+    ////: '24',
     textAlign: "center",
     marginTop: 46,
     fontWeight: "bold"
   },
+  vw_cpf: {
+    flexDirection: "row",
+    height: 34,
+    marginLeft: 68,
+    width: 239,
+    borderRadius: 10,
+    alignContent: "center",
+    alignItems: "center",
+  },
   cpf: {
-    fontFamily: "roboto-regular",
     color: "rgba(255,255,255,1)",
-    fontSize: 16,
+    //: 16,
     marginTop: 43,
     marginLeft: 68,
     paddingBottom: 10
   },
   ph_cpf: {
-    fontFamily: "roboto-regular",
     keyboardType: 'numeric',
     color: "black",
     height: 34,
     width: 239,
     textAlign: "center",
-    fontSize: 16,
+    //: 16,
     backgroundColor: "rgba(255,255,255,1)",
     borderWidth: 1,
     borderColor: "#000000",
@@ -89,12 +98,10 @@ const styles = StyleSheet.create({
     elevation: 5,
     shadowOpacity: 1,
     shadowRadius: 0,
-    marginLeft: 68
   },
   senha: {
-    fontFamily: "roboto-regular",
     color: "rgba(255,255,255,1)",
-    fontSize: 16,
+    //: 16,
     marginTop: 36,
     marginLeft: 68,
     paddingBottom: 10
@@ -109,12 +116,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   ph_senha: {
-    fontFamily: "roboto-regular",
     color: "black",
     width: '85%',
     height: '100%',
     textAlign: "center",
-    fontSize: 16,
+    //: 16,
     backgroundColor: "rgba(255,255,255,1)",
     borderWidth: 1,
     borderColor: "#000000",
@@ -149,11 +155,9 @@ const styles = StyleSheet.create({
     fontWeight: "bold"
   },
   esqueceuSuaSenha: {
-    fontFamily: "roboto-regular",
     color: "rgba(255,255,255,1)"
   },
   cliqueAqui: {
-    fontFamily: "roboto-700",
     color: "rgba(139,87,42,1)",
     marginLeft: 4,
     fontWeight: "bold"

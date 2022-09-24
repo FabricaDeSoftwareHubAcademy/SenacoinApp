@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
   logo: {
     width: 305,
     height: 250,
-    alignContent: 'cover',
+    alignContent: 'center',
     resizeMode: 'stretch'
   },
   clube: {
@@ -34,6 +34,6 @@ const styles = StyleSheet.create({
     color: "rgba(139,87,42,1)",
     fontWeight: 'bold',
     shadowColor: 'black',
-    fontSize: 24
+    //: 24
   },
 });
