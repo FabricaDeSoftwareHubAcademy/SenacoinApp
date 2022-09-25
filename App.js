@@ -34,6 +34,6 @@ const styles = StyleSheet.create({
     color: "rgba(139,87,42,1)",
     fontWeight: 'bold',
     shadowColor: 'black',
-    //: 24
-  },
+    fontSize: 24.0,
+  }
 });

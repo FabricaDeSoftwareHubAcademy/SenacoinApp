@@ -8,12 +8,12 @@ const Login = () => {
         <Text style={styles.info}>Entre com a sua conta</Text>
         <Text style={styles.cpf}>CPF</Text>
         <View style={styles.vw_cpf}>
-        <TextInput
-          maxLength={11}
-          placeholder="Digite seu CPF"
-          placeholderTextColor={'gray'}
-          style={styles.ph_cpf}
-        />
+          <TextInput
+            maxLength={11}
+            placeholder="Digite seu CPF"
+            placeholderTextColor={'gray'}
+            style={styles.ph_cpf}
+          />
         </View>
         <Text style={styles.senha}>Senha</Text>
         <View style={styles.vw_senha}>
@@ -29,15 +29,17 @@ const Login = () => {
             <Ionicons name="eye" color="white" size="25"></Ionicons>
           </TouchableOpacity>
         </View>
-        <TouchableOpacity style={styles.btn_acessar}>
-          <Text style={styles.txt_btn_acessar}>Entrar no clube</Text>
-        </TouchableOpacity>
-        <View style={[styles.esqueceuSuaSenhaRow, styles.rect]}>
+        <View style={styles.vw_btn_acessar}>
+          <TouchableOpacity style={styles.btn_acessar}>
+            <Text style={styles.txt_btn_acessar}>Entrar no clube</Text>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.esqueceuSuaSenhaRow}>
           <Text style={styles.esqueceuSuaSenha}>Esqueçeu sua senha?</Text>
           <Text style={styles.cliqueAqui}>Clique aqui.</Text>
         </View>
-        <View>
-          <Text style={styles.rodape}>Aqui</Text>
+        <View style={styles.vw_rodape}>
+          <Text style={styles.rodape}>Ao se inscrever, você concorda com nossa Política de Privacidade e Termos de Uso</Text>
         </View>
       </View>
     </View>
@@ -51,103 +53,56 @@ const styles = StyleSheet.create({
   rect: {
     flex: 1,
     backgroundColor: "rgba(6,6,6,1)",
-    marginTop: 35,
     borderTopStartRadius: 15,
     borderTopEndRadius: 15
   },
   info: {
-    color: "rgba(255,255,255,1)",
-    ////: '24',
-    textAlign: "center",
-    marginTop: 46,
-    fontWeight: "bold"
+    color: "white",
+    textAlign: "center"
   },
   vw_cpf: {
     flexDirection: "row",
-    height: 34,
-    marginLeft: 68,
-    width: 239,
-    borderRadius: 10,
-    alignContent: "center",
-    alignItems: "center",
+    justifyContent: "center"
   },
   cpf: {
-    color: "rgba(255,255,255,1)",
-    //: 16,
-    marginTop: 43,
-    marginLeft: 68,
-    paddingBottom: 10
+    color: "white",
+    textAlign: "center"
   },
   ph_cpf: {
     keyboardType: 'numeric',
     color: "black",
-    height: 34,
-    width: 239,
     textAlign: "center",
-    //: 16,
-    backgroundColor: "rgba(255,255,255,1)",
-    borderWidth: 1,
-    borderColor: "#000000",
     borderRadius: 10,
-    shadowColor: "rgba(0,0,0,1)",
     padding: 10,
-    shadowOffset: {
-      height: 0,
-      width: 0
-    },
-    elevation: 5,
-    shadowOpacity: 1,
-    shadowRadius: 0,
-  },
-  senha: {
-    color: "rgba(255,255,255,1)",
-    //: 16,
-    marginTop: 36,
-    marginLeft: 68,
-    paddingBottom: 10
+    backgroundColor: "white",
   },
   vw_senha: {
     flexDirection: "row",
-    height: 34,
-    marginLeft: 68,
-    width: 239,
-    borderRadius: 10,
-    alignContent: "center",
-    alignItems: "center",
+    justifyContent: "center"
+  },
+  senha: {
+    color: "white",
+    textAlign: "center"
   },
   ph_senha: {
     color: "black",
-    width: '85%',
-    height: '100%',
     textAlign: "center",
-    //: 16,
-    backgroundColor: "rgba(255,255,255,1)",
-    borderWidth: 1,
-    borderColor: "#000000",
+    borderColor: "white",
     borderRadius: 10,
-    shadowColor: "rgba(0,0,0,1)",
-    shadowOffset: {
-      height: 0,
-      width: 0
-    },
-    elevation: 5,
-    shadowOpacity: 1,
-    shadowRadius: 0,
+    padding: 10,
+    backgroundColor: "white"
   },
   icon: {
-    width: '15%',
     backgroundColor: "black",
+    justifyContent: "space-around"
+  },
+  vw_btn_acessar: {
     alignItems: "center"
   },
   btn_acessar: {
-    paddingTop: 10,
-    paddingBottom: 10,
-    width: 239,
-    height: 44,
     backgroundColor: "rgba(139,87,42,1)",
-    marginTop: 43,
-    marginLeft: 68,
-    borderRadius: 15
+    borderRadius: 15,
+    width: '25%'
   },
   txt_btn_acessar: {
     color: 'white',
@@ -163,16 +118,21 @@ const styles = StyleSheet.create({
     fontWeight: "bold"
   },
   esqueceuSuaSenhaRow: {
-    height: 17,
     flexDirection: "row",
-    marginTop: 23,
-    marginLeft: 68,
-    marginRight: 94
+    textAlign: "center",
+    justifyContent: "center"
+  },
+  vw_rodape: {
+    alignItems: "center"
   },
   rodape: {
-    color: "white",
+    width: '70%',
     flexWrap: "wrap",
-    textAlign: "center"
+    color: "white",
+    marginLeft: '5%',
+    textAlign: "center",
+    paddingTop: 10,
+    paddingBottom: 25
   }
 });
 
