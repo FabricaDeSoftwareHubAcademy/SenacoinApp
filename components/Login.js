@@ -26,7 +26,7 @@ const Login = () => {
             secureTextEntry={true}
           />
           <TouchableOpacity style={styles.icon}>
-            <Ionicons name="eye" color="white" size="25"></Ionicons>
+            <Ionicons name="eye" color="black" size="25"></Ionicons>
           </TouchableOpacity>
         </View>
         <View style={styles.vw_btn_acessar}>
@@ -58,7 +58,8 @@ const styles = StyleSheet.create({
   },
   info: {
     color: "white",
-    textAlign: "center"
+    textAlign: "center",
+    padding: 10
   },
   vw_cpf: {
     flexDirection: "row",
@@ -66,7 +67,8 @@ const styles = StyleSheet.create({
   },
   cpf: {
     color: "white",
-    textAlign: "center"
+    textAlign: "center",
+    padding: 5
   },
   ph_cpf: {
     keyboardType: 'numeric',
@@ -75,6 +77,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     padding: 10,
     backgroundColor: "white",
+    width: '50%'
   },
   vw_senha: {
     flexDirection: "row",
@@ -82,7 +85,8 @@ const styles = StyleSheet.create({
   },
   senha: {
     color: "white",
-    textAlign: "center"
+    textAlign: "center",
+    padding: 5
   },
   ph_senha: {
     color: "black",
@@ -90,19 +94,23 @@ const styles = StyleSheet.create({
     borderColor: "white",
     borderRadius: 10,
     padding: 10,
-    backgroundColor: "white"
+    backgroundColor: "white",
+    width: '50%'
   },
   icon: {
-    backgroundColor: "black",
-    justifyContent: "space-around"
+    justifyContent: "space-around",
+    marginLeft: -15,
+    borderRadius: 15,
   },
   vw_btn_acessar: {
+    padding: 15,
     alignItems: "center"
   },
   btn_acessar: {
     backgroundColor: "rgba(139,87,42,1)",
     borderRadius: 15,
-    width: '25%'
+    padding: 20,
+    width: '50%'
   },
   txt_btn_acessar: {
     color: 'white',
