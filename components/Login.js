@@ -13,6 +13,7 @@ const Login = () => {
             placeholder="Digite seu CPF"
             placeholderTextColor={'gray'}
             style={styles.ph_cpf}
+            keyboardType="number-pad"
           />
         </View>
         <Text style={styles.senha}>Senha</Text>
@@ -26,7 +27,7 @@ const Login = () => {
             secureTextEntry={true}
           />
           <TouchableOpacity style={styles.icon}>
-            <Ionicons name="eye" color="black" size="25"></Ionicons>
+            <Ionicons name="eye" color="black"></Ionicons>
           </TouchableOpacity>
         </View>
         <View style={styles.vw_btn_acessar}>
@@ -134,10 +135,9 @@ const styles = StyleSheet.create({
     alignItems: "center"
   },
   rodape: {
-    width: '70%',
+    width: '50%',
     flexWrap: "wrap",
     color: "white",
-    marginLeft: '5%',
     textAlign: "center",
     paddingTop: 10,
     paddingBottom: 25
