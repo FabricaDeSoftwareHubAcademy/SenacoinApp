@@ -27,7 +27,7 @@ const Login = () => {
             secureTextEntry={true}
           />
           <TouchableOpacity style={styles.icon}>
-            <Ionicons name="eye" color="black"></Ionicons>
+            <Ionicons name="eye" color="black" size={20}></Ionicons>
           </TouchableOpacity>
         </View>
         <View style={styles.vw_btn_acessar}>
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
   },
   icon: {
     justifyContent: "space-around",
-    marginLeft: -15,
+    marginLeft: -25,
     borderRadius: 15,
   },
   vw_btn_acessar: {
