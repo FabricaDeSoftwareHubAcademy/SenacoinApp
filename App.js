@@ -9,6 +9,7 @@ export default function App() {
       <Text style={styles.clube}>Clube Senacoin</Text>
       <View>
         <Login></Login>
+        <Text style={{textAlign: "center"}}>Senac MS ₢ - 2022</Text>
       </View>
     </View>
   );
@@ -24,8 +25,8 @@ const styles = StyleSheet.create({
     borderColor: "rgba(230, 230, 230,1)",
   },
   logo: {
-    width: 305,
-    height: 250,
+    width: 150,
+    height: 150,
     alignContent: 'center',
     resizeMode: 'stretch'
   },

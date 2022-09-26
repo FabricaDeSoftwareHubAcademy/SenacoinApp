@@ -1,5 +1,6 @@
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { Ionicons } from '@expo/vector-icons'
+import Dashboard from "./Dashboard";
 
 const Login = () => {
   return (
@@ -26,7 +27,7 @@ const Login = () => {
             style={styles.ph_senha}
             secureTextEntry={true}
           />
-          <TouchableOpacity style={styles.icon}>
+          <TouchableOpacity style={styles.icon} onPress={Dashboard}>
             <Ionicons name="eye" color="black" size={20}></Ionicons>
           </TouchableOpacity>
         </View>
