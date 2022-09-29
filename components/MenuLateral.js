@@ -3,7 +3,7 @@ import {Text, TextInput, View, StyleSheet} from 'react-native';
 const MenuLateral = () => {
     return (
         <View>
-            <Text>Teste Componetes</Text>
+            <Text>Teste Componetes - Teste</Text>
             <TextInput placeholder='Olá' style={styles1.TextInputML}/>
         </View>
     );
