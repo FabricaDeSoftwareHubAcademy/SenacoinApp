@@ -5,7 +5,7 @@ const Dashboard = () => {
     return (
         <View style={styles.container}>
             <View style={styles.rect}>
-                <Text>Dashboard</Text>
+                <Text>Dashboard - Início</Text>
             </View>
         </View>
     );
